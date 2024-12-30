@@ -11,7 +11,7 @@ const mongoDBURL = process.env.mongoDBURL;
 
 const app = express();
 app.use(cors({
-    origin:"https://vizzkers.vercel.app/",
+    origin:"https://vizzkers.vercel.app",
     credentials: true, 
 }));
 
