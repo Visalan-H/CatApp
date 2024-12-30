@@ -7,11 +7,11 @@ import cookieparser from 'cookie-parser'
 import dotenv from 'dotenv'
 dotenv.config();
 const mongoDBURL = process.env.mongoDBURL;
-const FRONTEND_URL=process.env.FRONTEND_URL;
+// const FRONTEND_URL=process.env.FRONTEND_URL;
 
 const app = express();
 app.use(cors({
-    origin:FRONTEND_URL ,
+    origin:"https://vizzkers.vercel.app/",
     credentials: true, 
 }));
 
