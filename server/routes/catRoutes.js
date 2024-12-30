@@ -3,8 +3,8 @@ const router1 = express.Router();
 import multer from 'multer'
 import { Cat } from '../models/Cat.js'
 import decodeTokenReturnUser from '../middleware/decodeTokenReturnUser.js';
+import { CloudinaryStorage } from 'multer-storage-cloudinary';
 import cloudinary from 'cloudinary';
-const { CloudinaryStorage } = require('multer-storage-cloudinary');
 
 // const storage = multer.diskStorage({
 //     destination: (req, file, cb) => {
