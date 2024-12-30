@@ -1,0 +1,60 @@
+.button_main {
+    padding: 0 35px 0 10px;
+    font-size: 12px;
+    border-radius: 8px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 2.8em;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button_main.dark {
+    background-color: #2a2438;
+    color: #ffecd2;
+}
+
+.button_main.light {
+    box-shadow: 0 0 1px 1px #fcb7a0;
+    background-image: linear-gradient(to right top, #ffecd2, #fee0c2, #fdd3b4, #fdc5a9, #fcb7a0);
+}
+
+.button_main i {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 6px;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.button_main i.light {
+    background-color: #2a2438;
+    color: #ffecd2;
+}
+
+.button_main i.dark {
+    background-image: linear-gradient(to right top, #ffecd2, #fee0c2, #fdd3b4, #fdc5a9, #fcb7a0);
+    color: #2a2438;
+}
+
+.button_main:hover i {
+    width: calc(100% - 0.6em);
+    box-shadow: 0 0 8px 3px #fcb7a0;
+    transition: all 0.3s;
+}
+
+.button_main.dark:hover i {
+    box-shadow: 0 0 10px 5px #2a2438;
+}
+
+.button_main:active i {
+    transform: scale(0.90);
+    transition: all 0.3s;
+}

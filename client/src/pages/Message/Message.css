@@ -1,0 +1,43 @@
+.main_message{
+    margin-top: 120px;
+    min-height: 83.5dvh;
+    width: 100vw;
+    background-color: #2a2438;
+    color: #2a2438;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.messagebox{
+    width: 80%;
+    min-height: 65dvh;
+    padding: 30px 10px 0 20px;
+    background-color: #fcecd2;
+    border: 3px solid #fcb7a0;
+    border-radius: 8px;
+}
+p{
+    font-size: 14px;
+    margin: 20px 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+.messagebox h3{
+    margin-bottom:30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.messagebox h6{
+    text-align: center;
+}
+@media only screen and (min-width:768px){
+    .messagebox{
+        width: 70%;
+    }
+    .messagebox p{
+        line-height: 2.5;
+        margin-top: 40px;
+    }
+}

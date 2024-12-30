@@ -1,0 +1,54 @@
+/* dark : #FCB7A0 */
+
+/* light : #FFECD2 */
+
+.main_login {
+    min-height: 83.5dvh;
+    /* width: 100%; */
+    background-color: #2a2438;
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginform {
+    border-radius: 20px;
+    background-color: #FFECD2;
+    color: #000;
+    min-height: 55dvh;
+    width: min(90%, 550px);
+    border: 1px solid #000;
+    padding: 10px 40px;
+
+    & h3 {
+        margin: 25px 0 40px;
+        font-size: 28px;
+        text-align: center;
+    }
+}
+
+input {
+    margin: 10px 0 20px;
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    border: 2px solid #fcb7a2;
+    border-radius: 5px;
+}
+
+.loginform button {
+    display: block;
+    height: 50px;
+    background-color: #fcb7a2;
+    color: black;
+    width: 130px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid black;
+}
+
+.loginform button:hover {
+    letter-spacing: 4px;
+    transition: all 0.3s ease;
+}
