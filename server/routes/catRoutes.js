@@ -28,10 +28,7 @@ const storage = new CloudinaryStorage({
     },
 });
 
-console.log(multerStorageCloudinary);
-
 const upload = multer({ storage });
-
 
 router1.get('/', async (req, res) => {
     try {
