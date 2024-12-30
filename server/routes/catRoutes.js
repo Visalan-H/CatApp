@@ -26,6 +26,8 @@ const storage = multerStorageCloudinary({
     }
 });
 
+console.log(multerStorageCloudinary);
+
 const upload = multer({ storage });
 
 
