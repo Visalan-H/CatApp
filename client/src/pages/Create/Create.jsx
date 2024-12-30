@@ -29,7 +29,7 @@ function Create({emailID}) {
     try {
       e.preventDefault();
       const ans = window.prompt(`This action cannot be reversed as of right now, Type "Y" to confirm`);
-      if (ans === "Y") {
+      if (ans === "Y" || ans==="y") {
       
         const formData = new FormData();
         formData.append("name", name);
