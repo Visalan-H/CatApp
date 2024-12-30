@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import './Card.css'
 import IconButton from '../IconButton/IconButton'
-import dotenv from 'dotenv'
-dotenv.config()
 import { jsPDF } from 'jspdf'
 
 function Card(props) {
@@ -23,8 +21,6 @@ function Card(props) {
     //     const whatsappURL = `https://wa.me/?text=${encodeURIComponent(message + " " + url)}`;
     //     window.open(whatsappURL, '_blank');
     // }
-    const imgURL = `${process.env.CLOUDINARY_URL}/cats/${props.image}.jpg`;
-    console.log(imgURL);
 
     const handleShare = () => {
         const doc = new jsPDF();
@@ -39,7 +35,7 @@ function Card(props) {
         doc.setFontSize(18);
         doc.text("meow meow!!", 15, 280);
         
-        const imageURL = (props.image.toUpperCase() !== "DUMMY.PNG") ?imgURL: `cats/cat.${props.n}.jpg`
+        const imageURL = (props.image.toUpperCase() !== "DUMMY.PNG") ?props.image: `cats/cat.${props.n}.jpg`
         const img = new Image();
         img.src = imageURL;
         img.onload = () => {
@@ -51,7 +47,7 @@ function Card(props) {
     return (
         <div className={`card_main light ${flip ? "flip" : ""}`}>
             <div className={`image ${flip ? "flip" : ""}`}>
-                <img className={`${flip ? "flip" : ""}`} src={(props.image.toUpperCase() !== "DUMMY.PNG") ? imgURL : `cats/cat.${props.n}.jpg`} alt="cat" />
+                <img className={`${flip ? "flip" : ""}`} src={(props.image.toUpperCase() !== "DUMMY.PNG") ? props.image: `cats/cat.${props.n}.jpg`} alt="cat" />
             </div>
             <div className={`contenthehe ${flip ? "flip" : ""}`}>
                 <h3 className='light'>{props.name}</h3>
