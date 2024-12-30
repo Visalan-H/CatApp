@@ -36,13 +36,13 @@ router2.post('/login', async (req, res) => {
         const user = await User.login(req.body.email, req.body.password);
         const token = makeToken(user._id);
 
+        console.log(token);
         res.cookie('jwt', token, {
             httpOnly: true,  // Ensures cookie is not accessible by JavaScript
-            secure: process.env.VERCEL_ENV === 'production',  // Set to true in production (Vercel uses HTTPS)
-            sameSite: 'strict',  // or 'lax' if you need a more relaxed setting
+            secure: true,
             maxAge: 24 * 60 * 60 * 1000  // Cookie expiration time (1 day)
         });
-        
+
         res.json(user);
 
     } catch (error) {
