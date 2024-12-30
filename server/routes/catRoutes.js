@@ -3,9 +3,8 @@ const router1 = express.Router();
 import multer from 'multer'
 import { Cat } from '../models/Cat.js'
 import decodeTokenReturnUser from '../middleware/decodeTokenReturnUser.js';
-import multerStorageCloudinary from 'multer-storage-cloudinary';
 import cloudinary from 'cloudinary';
-const { v2: cloudinaryV2 } = cloudinary;
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
 
 // const storage = multer.diskStorage({
 //     destination: (req, file, cb) => {
@@ -16,14 +15,17 @@ const { v2: cloudinaryV2 } = cloudinary;
 //         cb(null, uniqueSuffix + '-' + file.originalname); // Ensure unique file names
 //     },
 // });
-const storage = multerStorageCloudinary({
-    cloudinary: cloudinaryV2, 
-    folder: 'cats', 
-    allowedFormats: ['jpg', 'jpeg', 'png'],  
-    filename: (req, file, cb) => {
-        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
-        cb(null, uniqueSuffix + '-' + file.originalname);  
-    }
+
+const storage = new CloudinaryStorage({
+    cloudinary: cloudinary.v2,  // cloudinary.v2 for the latest features
+    params: {
+        folder: 'cats', // specify the folder in Cloudinary where images will be uploaded
+        allowedFormats: ['jpg', 'jpeg', 'png'],
+        public_id: (req, file) => {
+            const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
+            return `cat-${uniqueSuffix}`;  // Custom public ID
+        },
+    },
 });
 
 console.log(multerStorageCloudinary);
