@@ -4,8 +4,8 @@ import multer from 'multer'
 import { Cat } from '../models/Cat.js'
 import decodeTokenReturnUser from '../middleware/decodeTokenReturnUser.js';
 import multerStorageCloudinary from 'multer-storage-cloudinary';
-import cloudinary from '../cloudinary.js';
-import { v2 as cloudinaryV2 } from 'cloudinary';
+import cloudinary from 'cloudinary';
+const { v2: cloudinaryV2 } = cloudinary;
 
 // const storage = multer.diskStorage({
 //     destination: (req, file, cb) => {
