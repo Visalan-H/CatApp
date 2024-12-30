@@ -49,7 +49,7 @@ function Card(props) {
     return (
         <div className={`card_main light ${flip ? "flip" : ""}`}>
             <div className={`image ${flip ? "flip" : ""}`}>
-                <img className={`${flip ? "flip" : ""}`} src={(props.image.toUpperCase() !== "DUMMY.PNG") ? `${import.meta.env.VITE_BASE_URL}` + props.image : `cats/cat.${props.n}.jpg`} alt="cat" />
+                <img className={`${flip ? "flip" : ""}`} src={(props.image.toUpperCase() !== "DUMMY.PNG") ? `${import.meta.env.VITE_BASE_URL}/` + props.image : `cats/cat.${props.n}.jpg`} alt="cat" />
             </div>
             <div className={`contenthehe ${flip ? "flip" : ""}`}>
                 <h3 className='light'>{props.name}</h3>

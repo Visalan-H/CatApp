@@ -15,8 +15,6 @@ app.use(cors({
     credentials: true, 
 }));
 
-console.log(FRONTEND_URL);
-
 app.use(cookieparser())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));

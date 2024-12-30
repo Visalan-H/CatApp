@@ -11,7 +11,6 @@ node_modules
 dist
 dist-ssr
 # public/
-server/uploads
 server/.env
 client/.env
 server/config.js
