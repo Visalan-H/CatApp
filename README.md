@@ -17,7 +17,7 @@
 
 ## Installation
 
-Please click the link here : [Click Here!]
+Please click the link here : [Click Here!](https://vizzkers.vercel.app/)
 
 ## Technologies Used
 - **Frontend**: React
