@@ -1,4 +1,3 @@
-
 # Vizzkers
 
 🐾 What’s **Vizzkers**? It’s a place where you can share your love for cats. Upload your cat’s pic, add their name, write a short description, and let the world see how awesome they are! 😻
@@ -29,3 +28,8 @@ Please click the link here : [Click Here!]
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Vizzkers Vizzdom: A Touch of Cat Humor  
+
+**How do cats feel about photo captions?**  
+“Words? I don’t need them—my whiskers do the talking.”
