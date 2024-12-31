@@ -59,13 +59,13 @@ function Create({emailID}) {
           <h3>ADD YOUR CAT!</h3>
           <div className='inputs'>
             <label htmlFor='name'>Name<span className='mand' dangerouslySetInnerHTML={{ __html: '&ast;' }}></span></label>
-            <input id="name" type="text" value={name} onChange={(e) => handleChange(e)} placeholder="cat's name" required />
+            <input id="name" type="text" value={name} onChange={(e) => handleChange(e)} placeholder="cat's name" required maxLength={15}/>
 
             <label htmlFor='email'>Email</label>
             <input id="email" type="email" value={email} onChange={(e) => handleChange(e)} placeholder='email' required/>
 
             <label htmlFor='description'>Description</label>
-            <input id="description" type="text" value={description} onChange={(e) => handleChange(e)} placeholder='description' />
+            <input id="description" type="text" value={description} onChange={(e) => handleChange(e)} placeholder='description' maxLength={40}/>
 
             <label htmlFor='image'>Image<span dangerouslySetInnerHTML={{ __html: '&ast;' }} className='mand'></span></label>
             <input id="image" type="file" onChange={(e) => handleChange(e)} accept="image/*" className='file-input' required />

@@ -29,7 +29,7 @@ body {
 
 .paw.static {
     transform: translate(-50%, -50%);
-    animation: fadeout 7s forwards;
+    animation: fadeout 4s forwards;
     font-size: 3em;
 }
 
